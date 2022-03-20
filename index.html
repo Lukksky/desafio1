@@ -4,24 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css"></link>
     <title>Formulario Newsletter</title>
 </head>
 <body>
-    <h1>Newsletter</h1>
-    <p>
-        Nome <input type="text" name="nome_user">
-        Sobrenome <input type="text" name="sobr_user">
-        Interesse <input type="text" name="inter_user"><br />
-    </p>
-    <p>
-        E-mail <input type="email" name="email_user">
-        Cidade <input type="text" name="cidade_user"><br />
-    </p>
-    <p>
-        Endereço <input type="text" name="ender_user">
-        Telefone <input typpe="text" name="tel_user"><br />
-    </p>
+    <div>
+        <h1 id="titulo">Cadastro Newsletter ACCT</h1>
+        <p id="subtitulo">Complete suas informações</p>
+        <br>
+    </div>
 
-    <input type="submit" value="Enviar">
+    <form>
+       <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome_user"><strong>Nome</strong></label>
+                <input type="text" name="nome_user" id="nome_user" required>
+            </div>
+
+            <div class="campo">
+                <label for="sobrenome_user"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome_user" id="sobrenome_user" required>
+            </div>
+
+            <div class="campo">
+                <label for="email_user"><strong>E-mail</strong></label>
+                <input type="email" name="email_user" id="email_user" required>
+            </div>
+
+        </fieldset>
+
+            <div class="campo">
+                <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
+                <label>
+                    <input type="radio" name="devweb" value="Front-End">Front-end
+                </label>
+                <label>
+                    <input type="radio" name="devweb" value="Back-End">Back-end
+                </label>
+                <label>
+                    <input type="radio" name="devweb" value="Fullstack">Fullstack
+                </label>
+            </div>
+
+            <div class="campo">
+                <label for="senioridade"><strong>Senioridade</strong></label>
+                <select name="senioridade" id="senioridade">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Júnior</option>
+                    <option>Pleno</option>
+                    <option>Sênior</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <div id="check">
+                    <label><strong>Selecione as tacnologias que voce utiliza</strong></label><br><br>
+                    <input type="checkbox" name="tecnologia1" id="tecnologia1" value="HTML">
+                    <label for="tecnologia1">HTML</label>
+                    <input type="checkbox" name="tecnologia2" id="tecnologia2" value="CSS">
+                    <label for="tecnologia2">CSS</label>
+                    <input type="checkbox" name="tecnologia3" id="tecnologia3" value="Javascript">
+                    <label for="tecnologia3">JavaScript</label>
+                    <input type="checkbox" name="tecnologia4" id="tecnologia4" value="PHP">
+                    <label for="tecnologia4">PHP</label>
+                    <input type="checkbox" name="tecnologia5" id="tecnologia5" value="C#">
+                    <label for="tecnologia5">C#</label>
+                    <input type="checkbox" name="tecnologia6" id="tecnologia6" value="Python">
+                    <label for="tecnologia6">Python</label>
+                    <input type="checkbox" name="tecnologia7" id="tecnologia7" value="Java">
+                    <label for="tecnologia7">Java</label>
+                </div>
+            </fieldset>
+        
+        <div class="campo">
+            <br>
+            <label><strong>Conte-nos um pouco sobre sua experiência:</strong></label>
+            <textarea row="6" style="width: 26em" name="xp" id="xp"></textarea>
+        </div>
+
+        <br><button class="botao" type="submit">Enviar</button>
+        
+    </form>
+    
 </body>
 </html>
